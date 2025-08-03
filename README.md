@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalentLNX Partner Training Journey</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .flowchart-step {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            min-height: 100px;
+            width: 100%;
+        }
+        .flowchart-arrow {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #118AB2;
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- 
+    Color Palette Name: Energetic & Playful
+    HEX Codes: #FF6B6B, #FFD166, #06D6A0, #118AB2, #073B4C
+    -->
+
+    <!-- 
+    Narrative Plan:
+    1.  Hero Section: Introduce the core philosophy of ARETÉ and the purpose of the training.
+    2.  The 4-Week Journey: Provide a high-level overview of the four-week immersive program.
+    3.  Module 1 (Foundations): Visualize the core principles (5 P's) and the key business verticals.
+    4.  Module 3 (Engagement): Detail the key strategic playbooks for candidate and client engagement (7-Touch Sequence, 5-Stage Discovery).
+    5.  Training Metrics: Showcase the structure of the live training sessions and the assessment goals.
+    6.  The Outcome: Conclude by reinforcing the transformation from partner to a strategic advisor, embodying ARETÉ.
+    -->
+
+    <!-- 
+    Visualization Plan:
+    - ARETÉ Philosophy: Goal: Inform -> Viz: Large, bold text. Justification: Conveys a single, powerful message. Method: HTML/Tailwind. No SVG/Mermaid.
+    - 4-Week Program: Goal: Organize -> Viz: Four styled cards in a grid. Justification: Clearly segments the program. Method: HTML/Tailwind. No SVG/Mermaid.
+    - Core Verticals: Goal: Compare -> Viz: Donut Chart. Justification: Shows the composition of TalentLNX's focus areas. Method: Chart.js/Canvas. No SVG/Mermaid.
+    - 5 P's Principle: Goal: Compare -> Viz: Radar Chart. Justification: Shows the interconnected facets of a core philosophy. Method: Chart.js/Canvas. No SVG/Mermaid.
+    - 7-Touch Sequence: Goal: Organize/Process -> Viz: Flowchart. Justification: Illustrates a step-by-step process clearly. Method: HTML/Tailwind with flexbox. No SVG/Mermaid.
+    - 5-Stage Discovery Call: Goal: Organize/Process -> Viz: Flowchart. Justification: Perfect for process visualization. Method: HTML/Tailwind with flexbox. No SVG/Mermaid.
+    - Assessment Goal: Goal: Inform -> Viz: Single Big Number (90%). Justification: Highlights a key statistic. Method: HTML/Tailwind. No SVG/Mermaid.
+    - Live Training Hours: Goal: Compare -> Viz: Horizontal Bar Chart. Justification: Compares the time commitment for each week. Method: Chart.js/Canvas. No SVG/Mermaid.
+    - Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in this output.
+    -->
+
+    <header class="bg-[#073B4C] text-white text-center py-12 px-4">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight">The TalentLNX Partner Journey to Excellence</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-gray-300">An immersive 4-week training program designed to equip our partners with the tools, strategies, and mindset to achieve <span class="font-bold text-[#06D6A0]">ARETÉ</span>: excellence in every placement.</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="the-journey" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-2 text-[#073B4C]">Your 4-Week Transformation</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-8">The curriculum is structured into a multi-week, immersive program, blending on-demand learning with live, interactive workshops to build a foundation of excellence.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#FF6B6B]">
+                    <h3 class="font-bold text-xl mb-2">Week 1: Foundations & Mindset</h3>
+                    <p class="text-gray-600">Internalize the core philosophies of ARETÉ, the 5 P's, and the LGM principle. Gain a deep understanding of our key client verticals and staffing models.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#FFD166]">
+                    <h3 class="font-bold text-xl mb-2">Week 2: The Tech Stack</h3>
+                    <p class="text-gray-600">Achieve mastery of our essential tools, including Zoho Recruit for tracking and the Microsoft Suite for professional, productive collaboration.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#06D6A0]">
+                    <h3 class="font-bold text-xl mb-2">Week 3: The Engagement Playbook</h3>
+                    <p class="text-gray-600">Learn the art and science of modern recruitment, from hyper-targeted sourcing and outreach to mastering discovery calls and offer management.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-[#118AB2]">
+                    <h3 class="font-bold text-xl mb-2">Week 4: The Partnership Lifecycle</h3>
+                    <p class="text-gray-600">Focus on governance, compliance, and the strategies for building long-term client loyalty that extends far beyond the initial placement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="module1" class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#073B4C]">Our Core Verticals of Expertise</h3>
+                    <p class="text-center text-gray-600 mb-4">Our success is built on deep specialization. This chart illustrates our strategic focus on four high-demand, high-impact sectors where our partners learn to become true experts.</p>
+                    <div class="chart-container">
+                        <canvas id="verticalsChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#073B4C]">The 5 P's of Peak Performance</h3>
+                     <p class="text-center text-gray-600 mb-6">"Proper Preparation Prevents Poor Performance" is our cornerstone philosophy. This radar chart shows the five interconnected areas of preparation required to achieve excellence.</p>
+                    <div class="chart-container">
+                        <canvas id="fivePsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="module3" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#073B4C]">The Engagement Playbook in Action</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">The 7-Touch Engagement Sequence</h3>
+                    <p class="text-center text-gray-600 mb-6">We teach a systematic, multi-channel approach to stay top-of-mind with high-value candidates, building relationships through consistent, value-driven communication.</p>
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="flowchart-step bg-[#118AB2] text-white">1. Personalized Email/InMail</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">2. LinkedIn Profile View & Like</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">3. Value-Add Follow-Up Email</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">4. Call / Voicemail Attempt</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">5. Personalized LinkedIn Connection</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">6. Email with Social Proof</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-[#06D6A0] text-white">7. Final Nudge / "Break-Up" Email</div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4">The 5-Stage Discovery Call</h3>
+                    <p class="text-center text-gray-600 mb-6">Partners learn to move beyond a sales pitch to a consultative conversation, uncovering true client needs and positioning TalentLNX as the ideal solution.</p>
+                    <div class="flex flex-col items-center space-y-2">
+                        <div class="flowchart-step bg-[#FF6B6B] text-white">1. Build Rapport</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">2. Gather Context</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">3. Probe for Pain Points</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-gray-100">4. Define Success Criteria</div>
+                        <div class="flowchart-arrow">▼</div>
+                        <div class="flowchart-step bg-[#FFD166] text-black">5. Agree on Next Steps</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="metrics" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-[#073B4C]">Training Metrics & Certification</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <h3 class="text-2xl font-bold mb-4 text-[#073B4C]">Certification Goal</h3>
+                    <p class="text-gray-600 mb-4">To ensure mastery of the material, all partners must pass the final certification exam.</p>
+                    <div class="text-7xl font-black text-[#06D6A0]">90%</div>
+                    <p class="text-gray-600 font-semibold mt-2">Minimum Passing Score</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-center mb-4 text-[#073B4C]">Live Workshop Focus</h3>
+                    <p class="text-center text-gray-600 mb-4">Each week includes a live, interactive session focused on practical application and skill-building, with time commitments increasing as the topics become more hands-on.</p>
+                    <div class="chart-container h-64 md:h-80">
+                        <canvas id="hoursChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-[#073B4C] text-white text-center py-8 px-4">
+        <h2 class="text-2xl font-bold">The Outcome: From Partner to Strategic Advisor</h2>
+        <p class="mt-2 max-w-2xl mx-auto text-gray-300">By completing this program, you become more than a vendor; you become an extension of our team, embodying the principles of ARETÉ and driving success for our clients and candidates.</p>
+    </footer>
+
+    <script>
+        const tooltipConfig = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            });
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const verticalsData = {
+            labels: ['Healthcare', 'Specialty Pharmacy', 'Shared Services', 'Call Centers'],
+            datasets: [{
+                label: 'Core Verticals',
+                data: [25, 25, 25, 25],
+                backgroundColor: [
+                    '#FF6B6B',
+                    '#FFD166',
+                    '#06D6A0',
+                    '#118AB2'
+                ],
+                borderColor: '#ffffff',
+                borderWidth: 2,
+                hoverOffset: 4
+            }]
+        };
+
+        const verticalsCtx = document.getElementById('verticalsChart').getContext('2d');
+        new Chart(verticalsCtx, {
+            type: 'doughnut',
+            data: verticalsData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipConfig,
+                plugins: {
+                    ...tooltipConfig.plugins,
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+
+        const fivePsData = {
+            labels: [
+                'Market Intelligence', 
+                'Operational Readiness', 
+                'Candidate Matching', 
+                'Problem-Solving', 
+                'Professional Polish'
+            ],
+            datasets: [{
+                label: 'Ideal Partner Profile',
+                data: [9, 8, 9, 8, 9],
+                fill: true,
+                backgroundColor: 'rgba(6, 214, 160, 0.2)',
+                borderColor: '#06D6A0',
+                pointBackgroundColor: '#06D6A0',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: '#06D6A0'
+            }]
+        };
+
+        const fivePsCtx = document.getElementById('fivePsChart').getContext('2d');
+        new Chart(fivePsCtx, {
+            type: 'radar',
+            data: fivePsData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipConfig,
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(7, 59, 76, 0.2)'
+                        },
+                        grid: {
+                            color: 'rgba(7, 59, 76, 0.2)'
+                        },
+                        pointLabels: {
+                            font: {
+                                size: 12,
+                                weight: 'bold'
+                            },
+                            color: '#073B4C'
+                        },
+                        ticks: {
+                            backdropColor: 'rgba(255, 255, 255, 0.75)',
+                            color: '#073B4C',
+                            stepSize: 2
+                        },
+                        suggestedMin: 0,
+                        suggestedMax: 10
+                    }
+                },
+                plugins: {
+                    ...tooltipConfig.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+
+
+        const hoursData = {
+            labels: ['Week 1: ARETÉ Mindset', 'Week 2: Workflow Simulation', 'Week 3: Discovery & Objection Handling'],
+            datasets: [{
+                label: 'Live Workshop Duration (Hours)',
+                data: [1.5, 2, 2],
+                backgroundColor: [
+                    '#FF6B6B',
+                    '#FFD166',
+                    '#06D6A0',
+                ],
+                borderColor: [
+                    '#FF6B6B',
+                    '#FFD166',
+                    '#06D6A0',
+                ],
+                borderWidth: 1
+            }]
+        };
+        
+        hoursData.labels = hoursData.labels.map(wrapLabel);
+
+        const hoursCtx = document.getElementById('hoursChart').getContext('2d');
+        new Chart(hoursCtx, {
+            type: 'bar',
+            data: hoursData,
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                ...tooltipConfig,
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Duration (Hours)'
+                        }
+                    }
+                },
+                plugins: {
+                     ...tooltipConfig.plugins,
+                    legend: {
+                        display: false
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
